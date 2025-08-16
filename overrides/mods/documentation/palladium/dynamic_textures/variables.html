@@ -28,6 +28,14 @@ Dynamic Texture Variables</h1>
 <h2>
 Overview</h2>
 <h3>
+PantheonSent</h3>
+<ul>
+<li>
+<a href="#pantheonsent:moon_knight_cape">
+Moon Knight Cape</a>
+</li>
+</ul>
+<h3>
 Palladium</h3>
 <ul>
 <li>
@@ -120,6 +128,134 @@ String Property</a>
 </li>
 </ul>
 </p>
+<hr>
+
+<div id="pantheonsent:moon_knight_cape">
+<h2>
+Moon Knight Cape</h2>
+<p>
+Returns the unfolding of the player's Moon Knight cape.</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+bobbing</td>
+<td>
+Boolean</td>
+<td>
+Determines of bobbing should be taken into account when doing the calculation</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+true</td>
+</tr>
+<tr>
+<td>
+add</td>
+<td>
+Float</td>
+<td>
+This value will be added on top of the returned value.</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+/</td>
+</tr>
+<tr>
+<td>
+subtract</td>
+<td>
+Float</td>
+<td>
+This value will be subtracted from the returned value.</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+/</td>
+</tr>
+<tr>
+<td>
+multiply</td>
+<td>
+Float</td>
+<td>
+This value will be subtracted with the returned value.</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+/</td>
+</tr>
+<tr>
+<td>
+divide</td>
+<td>
+Float</td>
+<td>
+This value will be divided to the returned value.</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+/</td>
+</tr>
+<tr>
+<td>
+min</td>
+<td>
+Float</td>
+<td>
+Using this value will set a minimum limit for the returned value.</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+/</td>
+</tr>
+<tr>
+<td>
+max</td>
+<td>
+Float</td>
+<td>
+Using this value will set a maximum limit for the returned value.</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+/</td>
+</tr>
+<tr>
+<td>
+modulo</td>
+<td>
+Float</td>
+<td>
+Using this value will apply a modulo operation to the returned value.</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+/</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"pantheonsent:moon_knight_cape","bobbing":true,"add":5.2,"subtract":3.1,"multiply":2.5,"divide":7.5,"min":5.5,"max":123.4,"modulo":5.0}</pre>
+</div>
 <hr>
 
 <div id="palladium:ability_float_property">

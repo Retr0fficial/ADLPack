@@ -28,6 +28,30 @@ Conditions</h1>
 <h2>
 Overview</h2>
 <h3>
+PantheonSent</h3>
+<ul>
+<li>
+<a href="#pantheonsent:is_moon_knight_gliding">
+is_moon_knight_gliding</a>
+</li>
+</ul>
+<h3>
+hertz</h3>
+<ul>
+<li>
+<a href="#hertz:dampened_by">
+dampened_by</a>
+</li>
+<li>
+<a href="#hertz:safe_has_effect_check">
+safe_has_effect_check</a>
+</li>
+<li>
+<a href="#hertz:safe_player_has_effect">
+safe_player_has_effect</a>
+</li>
+</ul>
+<h3>
 alienevo</h3>
 <ul>
 <li>
@@ -53,6 +77,18 @@ wall_run_down</a>
 <li>
 <a href="#alienevo:wall_run_up">
 wall_run_up</a>
+</li>
+</ul>
+<h3>
+Gravestone: Core</h3>
+<ul>
+<li>
+<a href="#gravecore:is_mainhand">
+is_mainhand</a>
+</li>
+<li>
+<a href="#gravecore:is_player">
+is_player</a>
 </li>
 </ul>
 <h3>
@@ -371,7 +407,283 @@ wears_suit_set</a>
 xor</a>
 </li>
 </ul>
+<h3>
+gravestone</h3>
+<ul>
+<li>
+<a href="#gravestone:compare_accessory_energy">
+compare_accessory_energy</a>
+</li>
+<li>
+<a href="#gravestone:dampened_by">
+dampened_by</a>
+</li>
+<li>
+<a href="#gravestone:date_condition">
+date_condition</a>
+</li>
+<li>
+<a href="#gravestone:does_accessory_exist">
+does_accessory_exist</a>
+</li>
+<li>
+<a href="#gravestone:does_accessory_have_energy">
+does_accessory_have_energy</a>
+</li>
+<li>
+<a href="#gravestone:get_energy_condition">
+get_energy_condition</a>
+</li>
+<li>
+<a href="#gravestone:key_condition">
+key_condition</a>
+</li>
+<li>
+<a href="#gravestone:month_condition">
+month_condition</a>
+</li>
+<li>
+<a href="#gravestone:null_data_condition">
+null_data_condition</a>
+</li>
+<li>
+<a href="#gravestone:persistent_data_condition">
+persistent_data_condition</a>
+</li>
+<li>
+<a href="#gravestone:perspective">
+perspective</a>
+</li>
+<li>
+<a href="#gravestone:power_selected">
+power_selected</a>
+</li>
+<li>
+<a href="#gravestone:safe_player_has_effect">
+safe_player_has_effect</a>
+</li>
+<li>
+<a href="#gravestone:uuid_condition">
+uuid_condition</a>
+</li>
+</ul>
+<h3>
+KubeJS</h3>
+<ul>
+<li>
+<a href="#kubejs:gravestone/is_mainhand">
+gravestone/is_mainhand</a>
+</li>
+</ul>
+<h3>
+satsy_iron_man_addon</h3>
+<ul>
+<li>
+<a href="#satsy_iron_man_addon:height_bool_condition">
+height_bool_condition</a>
+</li>
+</ul>
+<h3>
+Arrzee's Multiverse</h3>
+<ul>
+<li>
+<a href="#arrzenhanced:arrow_index_is">
+arrow_index_is</a>
+</li>
+<li>
+<a href="#arrzenhanced:block_at_raycast">
+block_at_raycast</a>
+</li>
+<li>
+<a href="#arrzenhanced:has_current_arrow">
+has_current_arrow</a>
+</li>
+<li>
+<a href="#arrzenhanced:has_no_blade">
+has_no_blade</a>
+</li>
+<li>
+<a href="#arrzenhanced:is_mainhand">
+is_mainhand</a>
+</li>
+<li>
+<a href="#arrzenhanced:safe_has_effect_check">
+safe_has_effect_check</a>
+</li>
+<li>
+<a href="#arrzenhanced:size_below">
+size_below</a>
+</li>
+<li>
+<a href="#arrzenhanced:size_is">
+size_is</a>
+</li>
+<li>
+<a href="#arrzenhanced:speed_above">
+speed_above</a>
+</li>
+<li>
+<a href="#arrzenhanced:speed_active">
+speed_active</a>
+</li>
+<li>
+<a href="#arrzenhanced:speed_below">
+speed_below</a>
+</li>
+<li>
+<a href="#arrzenhanced:speed_color_is">
+speed_color_is</a>
+</li>
+<li>
+<a href="#arrzenhanced:speed_is">
+speed_is</a>
+</li>
+</ul>
 </p>
+<hr>
+
+<div id="pantheonsent:is_moon_knight_gliding">
+<h2>
+is_moon_knight_gliding</h2>
+<p>
+Checks if the entity is current doing the Moon Knight gliding.<br><br>Applicable for: all</p>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"pantheonsent:is_moon_knight_gliding"}</pre>
+</div>
+<hr>
+
+<div id="hertz:dampened_by">
+<h2>
+dampened_by</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+effect</td>
+<td>
+String</td>
+<td>
+Effect to search for</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+minecraft:health_boost</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"hertz:dampened_by","effect":"minecraft:health_boost"}</pre>
+</div>
+<hr>
+
+<div id="hertz:safe_has_effect_check">
+<h2>
+safe_has_effect_check</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+effect</td>
+<td>
+String</td>
+<td>
+Effect to search for</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+minecraft:health_boost</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"hertz:safe_has_effect_check","effect":"minecraft:health_boost"}</pre>
+</div>
+<hr>
+
+<div id="hertz:safe_player_has_effect">
+<h2>
+safe_player_has_effect</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+effect</td>
+<td>
+String</td>
+<td>
+Effect to search for</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+minecraft:health_boost</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"hertz:safe_player_has_effect","effect":"minecraft:health_boost"}</pre>
+</div>
 <hr>
 
 <div id="alienevo:color">
@@ -603,6 +915,62 @@ wall_run</td>
 Example:</h3>
 <pre class="json-snippet">
 {"type":"alienevo:wall_run_up","data_name":"wall_run"}</pre>
+</div>
+<hr>
+
+<div id="gravecore:is_mainhand">
+<h2>
+is_mainhand</h2>
+<p>
+checks what the current mainhand is<br><br>Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+mainhand</td>
+<td>
+String</td>
+<td>
+Is the main hand the right or left hand? Valid values are \"left\" or \"right\"</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+right</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravecore:is_mainhand","mainhand":"right"}</pre>
+</div>
+<hr>
+
+<div id="gravecore:is_player">
+<h2>
+is_player</h2>
+<p>
+checks if the current entity is a player<br><br>Applicable for: all</p>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravecore:is_player"}</pre>
 </div>
 <hr>
 
@@ -3843,6 +4211,1402 @@ false</td>
 Example:</h3>
 <pre class="json-snippet">
 {"type":"palladium:xor","conditions":[]}</pre>
+</div>
+<hr>
+
+<div id="gravestone:compare_accessory_energy">
+<h2>
+compare_accessory_energy</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+curios_slot</td>
+<td>
+String</td>
+<td>
+Curios Slot Id</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+body</td>
+</tr>
+<tr>
+<td>
+trinket_slot</td>
+<td>
+String</td>
+<td>
+Trinket Slot Id</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+chest/cape</td>
+</tr>
+<tr>
+<td>
+compare_energy</td>
+<td>
+Integer</td>
+<td>
+The amount of energy to compare</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+10</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:compare_accessory_energy","curios_slot":"body","trinket_slot":"chest/cape","compare_energy":10}</pre>
+</div>
+<hr>
+
+<div id="gravestone:dampened_by">
+<h2>
+dampened_by</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+effect</td>
+<td>
+String</td>
+<td>
+Effect to search for</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+minecraft:health_boost</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:dampened_by","effect":"minecraft:health_boost"}</pre>
+</div>
+<hr>
+
+<div id="gravestone:date_condition">
+<h2>
+date_condition</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+month</td>
+<td>
+Integer</td>
+<td>
+the month of the year</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+3</td>
+</tr>
+<tr>
+<td>
+day</td>
+<td>
+Integer</td>
+<td>
+the day of the month</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+25</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:date_condition","month":3,"day":25}</pre>
+</div>
+<hr>
+
+<div id="gravestone:does_accessory_exist">
+<h2>
+does_accessory_exist</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+curios_slot</td>
+<td>
+String</td>
+<td>
+Curios Slot Id</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+body</td>
+</tr>
+<tr>
+<td>
+trinket_slot</td>
+<td>
+String</td>
+<td>
+Trinket Slot Id</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+chest/cape</td>
+</tr>
+<tr>
+<td>
+accessory_id</td>
+<td>
+String</td>
+<td>
+The item ID to search for</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+awesoft_technologies:tier1_arc_reactor</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:does_accessory_exist","curios_slot":"body","trinket_slot":"chest/cape","accessory_id":"awesoft_technologies:tier1_arc_reactor"}</pre>
+</div>
+<hr>
+
+<div id="gravestone:does_accessory_have_energy">
+<h2>
+does_accessory_have_energy</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+curios_slot</td>
+<td>
+String</td>
+<td>
+Curios Slot Id</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+body</td>
+</tr>
+<tr>
+<td>
+trinket_slot</td>
+<td>
+String</td>
+<td>
+Trinket Slot Id</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+chest/cape</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:does_accessory_have_energy","curios_slot":"body","trinket_slot":"chest/cape"}</pre>
+</div>
+<hr>
+
+<div id="gravestone:get_energy_condition">
+<h2>
+get_energy_condition</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+energy</td>
+<td>
+Integer</td>
+<td>
+Amount of energy to compare</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+10</td>
+</tr>
+<tr>
+<td>
+id</td>
+<td>
+String</td>
+<td>
+Item to look for in curios slot</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+grave.codec:tachyon_device</td>
+</tr>
+<tr>
+<td>
+curios_slot</td>
+<td>
+String</td>
+<td>
+curios slot id</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+body</td>
+</tr>
+<tr>
+<td>
+trinket_slot</td>
+<td>
+String</td>
+<td>
+trinket slot id</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+chest/cape</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:get_energy_condition","energy":10,"id":"grave.codec:tachyon_device","curios_slot":"body","trinket_slot":"chest/cape"}</pre>
+</div>
+<hr>
+
+<div id="gravestone:key_condition">
+<h2>
+key_condition</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+key</td>
+<td>
+String</td>
+<td>
+Key press to activate condition, ex. "RIGHT_ALT"</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+SPACE</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:key_condition","key":"SPACE"}</pre>
+</div>
+<hr>
+
+<div id="gravestone:month_condition">
+<h2>
+month_condition</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+month</td>
+<td>
+Integer</td>
+<td>
+the month of the year</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+3</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:month_condition","month":3}</pre>
+</div>
+<hr>
+
+<div id="gravestone:null_data_condition">
+<h2>
+null_data_condition</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+persistent_data</td>
+<td>
+String</td>
+<td>
+Persistent data to search through</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+petrosapien_name</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:null_data_condition","persistent_data":"petrosapien_name"}</pre>
+</div>
+<hr>
+
+<div id="gravestone:persistent_data_condition">
+<h2>
+persistent_data_condition</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+persistent_data</td>
+<td>
+String</td>
+<td>
+Persistent data to search through</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+gravecamera</td>
+</tr>
+<tr>
+<td>
+value</td>
+<td>
+String</td>
+<td>
+value to compare against</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+FIRST_PERSON</td>
+</tr>
+<tr>
+<td>
+sign</td>
+<td>
+String</td>
+<td>
+==, !=, <=, >=, >, <</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+==</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:persistent_data_condition","persistent_data":"gravecamera","value":"FIRST_PERSON","sign":"=="}</pre>
+</div>
+<hr>
+
+<div id="gravestone:perspective">
+<h2>
+perspective</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+looking</td>
+<td>
+String</td>
+<td>
+check which perspective the player is, options: [FIRST_PERSON, THIRD_PERSON_BACK, THIRD_PERSON_FRONT]</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+FIRST_PERSON</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:perspective","looking":"FIRST_PERSON"}</pre>
+</div>
+<hr>
+
+<div id="gravestone:power_selected">
+<h2>
+power_selected</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+power</td>
+<td>
+String</td>
+<td>
+ID of the power to test</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+pack:power</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:power_selected","power":"pack:power"}</pre>
+</div>
+<hr>
+
+<div id="gravestone:safe_player_has_effect">
+<h2>
+safe_player_has_effect</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+effect</td>
+<td>
+String</td>
+<td>
+Effect to search for</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+minecraft:health_boost</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:safe_player_has_effect","effect":"minecraft:health_boost"}</pre>
+</div>
+<hr>
+
+<div id="gravestone:uuid_condition">
+<h2>
+uuid_condition</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+uuid</td>
+<td>
+String</td>
+<td>
+the uuid of a player</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+b7ce1b6e-0e7c-41a6-b3cb-e847a381debf</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"gravestone:uuid_condition","uuid":"b7ce1b6e-0e7c-41a6-b3cb-e847a381debf"}</pre>
+</div>
+<hr>
+
+<div id="kubejs:gravestone/is_mainhand">
+<h2>
+gravestone/is_mainhand</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+hand_type</td>
+<td>
+String</td>
+<td>
+Is the main hand the right or left hand? Valid values are "left" or "right"</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+right</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"kubejs:gravestone/is_mainhand","hand_type":"right"}</pre>
+</div>
+<hr>
+
+<div id="satsy_iron_man_addon:height_bool_condition">
+<h2>
+height_bool_condition</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+max_height</td>
+<td>
+Integer</td>
+<td>
+how high you can go</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+100</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"satsy_iron_man_addon:height_bool_condition","max_height":100}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:arrow_index_is">
+<h2>
+arrow_index_is</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+size_id</td>
+<td>
+String</td>
+<td>
+ID used for selection</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+arrzenhanced.iron_prism.arrow_sel</td>
+</tr>
+<tr>
+<td>
+index</td>
+<td>
+Integer</td>
+<td>
+Amount index needs to be equal to</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+0</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:arrow_index_is","size_id":"arrzenhanced.iron_prism.arrow_sel","index":0}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:block_at_raycast">
+<h2>
+block_at_raycast</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+distance</td>
+<td>
+Integer</td>
+<td>
+Distance to raycast</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+10</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:block_at_raycast","distance":10}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:has_current_arrow">
+<h2>
+has_current_arrow</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:has_current_arrow"}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:has_no_blade">
+<h2>
+has_no_blade</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:has_no_blade"}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:is_mainhand">
+<h2>
+is_mainhand</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+hand</td>
+<td>
+String</td>
+<td>
+left or right. returns true</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+right</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:is_mainhand","hand":"right"}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:safe_has_effect_check">
+<h2>
+safe_has_effect_check</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+effect</td>
+<td>
+String</td>
+<td>
+Effect to search for</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+minecraft:health_boost</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:safe_has_effect_check","effect":"minecraft:health_boost"}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:size_below">
+<h2>
+size_below</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+size_id</td>
+<td>
+String</td>
+<td>
+ID used for size control</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+arrzenhanced.size</td>
+</tr>
+<tr>
+<td>
+amount</td>
+<td>
+Integer</td>
+<td>
+Amount control needs to be below</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+0</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:size_below","size_id":"arrzenhanced.size","amount":0}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:size_is">
+<h2>
+size_is</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+size_id</td>
+<td>
+String</td>
+<td>
+ID used for size control</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+arrzenhanced.size</td>
+</tr>
+<tr>
+<td>
+amount</td>
+<td>
+Integer</td>
+<td>
+Amount control needs to be equal to</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+0</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:size_is","size_id":"arrzenhanced.size","amount":0}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:speed_above">
+<h2>
+speed_above</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+speedforce_id</td>
+<td>
+String</td>
+<td>
+ID used for speed control</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+arrzenhanced.speed</td>
+</tr>
+<tr>
+<td>
+amount</td>
+<td>
+Integer</td>
+<td>
+Amount control needs to be over or meet</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+1</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:speed_above","speedforce_id":"arrzenhanced.speed","amount":1}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:speed_active">
+<h2>
+speed_active</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:speed_active"}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:speed_below">
+<h2>
+speed_below</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+speedforce_id</td>
+<td>
+String</td>
+<td>
+ID used for speed control</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+arrzenhanced.speed</td>
+</tr>
+<tr>
+<td>
+amount</td>
+<td>
+Integer</td>
+<td>
+Amount control needs to be under</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+1</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:speed_below","speedforce_id":"arrzenhanced.speed","amount":1}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:speed_color_is">
+<h2>
+speed_color_is</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+color_id</td>
+<td>
+String</td>
+<td>
+ID used for speed color</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+arrzenhanced.speedColor</td>
+</tr>
+<tr>
+<td>
+number</td>
+<td>
+Integer</td>
+<td>
+Color number to test for</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+1</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:speed_color_is","color_id":"arrzenhanced.speedColor","number":1}</pre>
+</div>
+<hr>
+
+<div id="arrzenhanced:speed_is">
+<h2>
+speed_is</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+speedforce_id</td>
+<td>
+String</td>
+<td>
+ID used for speed control</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+arrzenhanced.speed</td>
+</tr>
+<tr>
+<td>
+amount</td>
+<td>
+Integer</td>
+<td>
+Amount control needs to be under</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+1</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"arrzenhanced:speed_is","speedforce_id":"arrzenhanced.speed","amount":1}</pre>
 </div>
 <script>
 function syntaxHighlight(json) {
