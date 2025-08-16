@@ -22,7 +22,7 @@
   "forge:rubber": "null",
   "forge:ingots/uranium": "mekanism:ingot_uranium",
   "forge:gems/sapphire": "null",
-  "forge:ingots/titanium": "null",
+  "forge:ingots/titanium": "infinity:titanium_ingot",
   "forge:ingots/steel": "tfmg:steel_ingot",
   "forge:gems/ruby": "null",
   "forge:ingots/platinum": "null",
