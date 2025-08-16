@@ -51,8 +51,24 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "mekanism": {
+    "infuse_type": true,
+    "gas": true,
+    "remove_builtin": true,
+    "pigment": true,
+    "fluid": true,
+    "slurry": true,
+    "energy": true,
+    "tooltip_renderer": true
+  },
+  "mysticalagradditions": {
+    "infused_farmland": true
+  },
   "createsifter": {
     "sifter_data": true
+  },
+  "twilightforest": {
+    "quest_ram_wool": true
   },
   "jade": {
     "coordinates.rel": false,
@@ -69,6 +85,11 @@
   },
   "waystones": {
     "waystone": true
+  },
+  "mysticalagriculture": {
+    "infused_farmland": true,
+    "crop": true,
+    "inferium_crop": true
   },
   "balm": {
     "jade": true

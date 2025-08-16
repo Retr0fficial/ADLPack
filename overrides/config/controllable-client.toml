@@ -13,7 +13,7 @@ inputLibrary = "SDL2"
 		listScrollSpeed = 10.0
 		# The speed which the cursor or virtual mouse moves around the screen
 		# Valid range: 0 to 50 (inclusive)
-		mouseSpeed = 15.0
+		mouseSpeed = 30.0
 		# The image to use for the cursor. This only applies if virtual mouse is enabled!
 		# Valid values: LIGHT, DARK, CONSOLE, CONSOLE_PLUS, LEGACY_LIGHT, LEGACY_DARK
 		cursorType = "CONSOLE"
@@ -52,10 +52,10 @@ inputLibrary = "SDL2"
 		showActions = "MINIMAL"
 		# If enabled, the player will render in the top left corner likes Bedrock Edition
 		# Valid values: true, false
-		renderMiniPlayer = true
+		renderMiniPlayer = false
 		# The speed which the camera turns in game
 		# Valid range: 0 to 100 (inclusive)
-		rotationSpeed = 25.0
+		rotationSpeed = 35.0
 		# The sensitivity of the camera's yaw rotation when applying the rotation speed. Setting to 1.0 would mean applying 100% of the rotation speed.
 		# Valid range: 0 to 1 (inclusive)
 		yawSensitivity = 1.0
