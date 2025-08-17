@@ -3,13 +3,13 @@ type = fancymenu_layout
 layout-meta {
   identifier = %fancymenu:universal_layout%
   render_custom_elements_behind_vanilla = false
-  last_edited_time = 1755364374520
+  last_edited_time = 1755389431323
   is_enabled = true
   randommode = false
   randomgroup = 1
   randomonlyfirsttime = false
   layout_index = 0
-  [loading_requirement_container_meta:bec628fa-9a1f-407a-ae7d-bba10838198c-1755364265098] = [groups:][instances:]
+  [loading_requirement_container_meta:41ee3336-a5c8-4315-9845-0cc0ba67eade-1755389409339] = [groups:][instances:]
 }
 
 customization {
@@ -32,8 +32,6 @@ layout_action_executable_blocks {
 }
 
 element {
-  audio_instance_0 = [source:local]/config/fancymenu/assets/areuup.ogg
-  audio_instance_weight_0 = 1.0
   play_mode = normal
   looping = false
   volume = 0.1
@@ -48,8 +46,8 @@ element {
   fade_out_speed = 1.0
   base_opacity = 1.0
   auto_sizing = false
-  auto_sizing_base_screen_width = 1920
-  auto_sizing_base_screen_height = 1011
+  auto_sizing_base_screen_width = 1026
+  auto_sizing_base_screen_height = 762
   sticky_anchor = false
   anchor_point = mid-centered
   x = -186
