@@ -756,7 +756,7 @@ element {
 
 element {
   interactable = true
-  source = Ver 0.0.5 For MC {"placeholder":"mcversion"}
+  source = Ver 0.0.6 For MC {"placeholder":"mcversion"}
   source_mode = direct
   shadow = true
   scale = 1.0
