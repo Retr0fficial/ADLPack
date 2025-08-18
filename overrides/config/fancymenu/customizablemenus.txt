@@ -36,9 +36,6 @@ net.minecraft.client.gui.screens.TitleScreen {
 net.minecraft.client.gui.screens.CreditsAndAttributionScreen {
 }
 
-net.minecraft.client.gui.screens.packs.PackSelectionScreen {
-}
-
 org.vivecraft.client.gui.settings.GuiMainVRSettings {
 }
 
