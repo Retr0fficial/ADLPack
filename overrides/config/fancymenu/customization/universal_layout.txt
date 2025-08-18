@@ -3,15 +3,23 @@ type = fancymenu_layout
 layout-meta {
   identifier = %fancymenu:universal_layout%
   render_custom_elements_behind_vanilla = false
+<<<<<<< Updated upstream
 
   last_edited_time = 1755516628433
+=======
+  last_edited_time = 1755551719998
+>>>>>>> Stashed changes
   is_enabled = true
   randommode = false
   randomgroup = 1
   randomonlyfirsttime = false
   layout_index = 0
+<<<<<<< Updated upstream
 
   [loading_requirement_container_meta:eac16d5a-af6e-4f4e-981e-d537dc536cc7-1755516609167] = [groups:][instances:]
+=======
+  [loading_requirement_container_meta:83ee948c-daa2-4e92-8873-1c673e45a8c6-1755551708456] = [groups:][instances:]
+>>>>>>> Stashed changes
 }
 
 menu_background {
