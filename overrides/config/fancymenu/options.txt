@@ -14,7 +14,7 @@ B:advanced_customization_mode = 'true';
 
 ##[loading]
 
-B:preload_animations = 'true';
+B:preload_animations = 'false';
 S:preload_resources = '';
 S:custom_game_intro_skip_text = '';
 B:allow_game_intro_skip = 'true';
