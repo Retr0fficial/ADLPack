@@ -6,11 +6,12 @@
         "id": "forge-47.4.6",
         "primary": true
       }
-    ]
+    ],
+    "recommendedRam": 8480
   },
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
-  "name": "ADLPack-master",
+  "name": "Alien Departure Lounge",
   "version": "0.0.6",
   "author": "",
   "files": [
@@ -90,6 +91,7 @@
       "required": true
     },
     {
+
       "projectID": 1086710,
       "fileID": 5755099,
       "required": true
