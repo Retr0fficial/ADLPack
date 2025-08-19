@@ -1,2 +1,8 @@
 type = user_variables
 
+variable {
+  name = current_ver
+  value = 0.0.8
+  reset_on_launch = false
+}
+
