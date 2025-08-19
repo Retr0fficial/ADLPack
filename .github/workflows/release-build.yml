@@ -1,0 +1,79 @@
+name: Build and Release to All Platforms
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Get release info
+      id: release_info
+      run: |
+        echo "tag_name=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+        echo "release_name=${{ github.event.release.name }}" >> $GITHUB_OUTPUT
+        echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+    
+    - name: Update manifest version
+      run: |
+        # Update the version in manifest.json to match the release tag
+        sed -i 's/"version": ".*"/"version": "${{ steps.release_info.outputs.version }}"/' manifest.json
+    
+    - name: Create ZIP archive
+      run: |
+        # Create zip excluding .git directory and other unnecessary files
+        zip -r "ADLPack-${{ steps.release_info.outputs.tag_name }}.zip" . \
+          -x ".git/*" ".github/*" "*.git*" "STAGING.md" "*.log" "*.tmp"
+    
+    - name: Upload ZIP to GitHub release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ./ADLPack-${{ steps.release_info.outputs.tag_name }}.zip
+        asset_name: ADLPack-${{ steps.release_info.outputs.tag_name }}.zip
+        asset_content_type: application/zip
+
+    - name: Upload to CurseForge
+      if: ${{ env.CURSEFORGE_TOKEN != '' }}
+      uses: itsmeow/curseforge-upload@v3
+      env:
+        CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+        CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+      with:
+        token: ${{ secrets.CURSEFORGE_TOKEN }}
+        project_id: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+        game_endpoint: minecraft
+        file_path: ADLPack-${{ steps.release_info.outputs.tag_name }}.zip
+        changelog: ${{ github.event.release.body }}
+        display_name: "Alien Departure Lounge ${{ steps.release_info.outputs.version }}"
+        game_versions: "1.20.1,Forge"
+        release_type: release
+
+    - name: Upload to Modrinth
+      if: ${{ env.MODRINTH_TOKEN != '' }}
+      uses: Kir-Antipov/mc-publish@v3.3
+      env:
+        MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        MODRINTH_PROJECT_ID: ${{ secrets.MODRINTH_PROJECT_ID }}
+      with:
+        modrinth-id: ${{ secrets.MODRINTH_PROJECT_ID }}
+        modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+        
+        files: ADLPack-${{ steps.release_info.outputs.tag_name }}.zip
+        name: "Alien Departure Lounge ${{ steps.release_info.outputs.version }}"
+        version: ${{ steps.release_info.outputs.version }}
+        changelog: ${{ github.event.release.body }}
+        
+        game-versions: |
+          1.20.1
+        loaders: |
+          forge
+        
+        version-type: release

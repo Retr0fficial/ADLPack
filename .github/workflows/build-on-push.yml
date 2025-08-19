@@ -1,0 +1,35 @@
+name: Build ZIP on Push
+
+on:
+  push:
+    branches: [ main, staging ]
+  pull_request:
+    branches: [ main, staging ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Get commit info
+      id: commit_info
+      run: |
+        echo "short_sha=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_OUTPUT
+        echo "branch_name=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+        echo "timestamp=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+    
+    - name: Create ZIP archive
+      run: |
+        # Create zip excluding .git directory and other unnecessary files
+        zip -r "ADLPack-${{ steps.commit_info.outputs.branch_name }}-${{ steps.commit_info.outputs.short_sha }}.zip" . \
+          -x ".git/*" ".github/*" "*.git*" "STAGING.md" "*.log" "*.tmp"
+    
+    - name: Upload ZIP as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ADLPack-${{ steps.commit_info.outputs.branch_name }}-${{ steps.commit_info.outputs.short_sha }}
+        path: ADLPack-${{ steps.commit_info.outputs.branch_name }}-${{ steps.commit_info.outputs.short_sha }}.zip
+        retention-days: 30
