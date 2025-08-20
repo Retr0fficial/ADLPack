@@ -117,9 +117,6 @@ net.minecraft.client.gui.screens.AccessibilityOptionsScreen {
 net.minecraft.client.gui.screens.ConfirmLinkScreen {
 }
 
-gg.essential.gui.vigilancev2.VigilanceV2SettingsGui {
-}
-
 com.mrcrayfish.controllable.client.gui.screens.SettingsScreen {
 }
 
@@ -154,5 +151,14 @@ net.minecraft.client.gui.screens.worldselection.EditWorldScreen {
 }
 
 net.minecraft.client.gui.screens.BackupConfirmScreen {
+}
+
+net.minecraft.client.gui.screens.PauseScreen {
+}
+
+net.minecraft.client.gui.screens.OnlineOptionsScreen {
+}
+
+gg.essential.gui.vigilancev2.VigilanceV2SettingsGui {
 }
 

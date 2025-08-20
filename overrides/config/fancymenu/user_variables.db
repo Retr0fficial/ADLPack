@@ -2,7 +2,7 @@ type = user_variables
 
 variable {
   name = current_ver
-  value = 0.0.8
+  value = 0.0.9
   reset_on_launch = false
 }
 
