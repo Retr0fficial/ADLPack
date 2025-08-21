@@ -12,7 +12,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Alien Departure Lounge",
-  "version": "0.1.1",
+  "version": "0.1.1b",
   "author": "",
   "files": [
     {
@@ -88,11 +88,6 @@
     {
       "projectID": 459929,
       "fileID": 5217955,
-      "required": true
-    },
-    {
-      "projectID": 987541,
-      "fileID": 6739370,
       "required": true
     },
     {
@@ -383,6 +378,11 @@
     {
       "projectID": 1152836,
       "fileID": 6727214,
+      "required": true
+    },
+    {
+      "projectID": 583228,
+      "fileID": 5658734,
       "required": true
     },
     {
@@ -1078,6 +1078,11 @@
     {
       "projectID": 618298,
       "fileID": 6859221,
+      "required": true
+    },
+    {
+      "projectID": 386134,
+      "fileID": 6899418,
       "required": true
     },
     {
