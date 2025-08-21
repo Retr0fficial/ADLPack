@@ -50,6 +50,14 @@ safe_has_effect_check</a>
 <a href="#hertz:safe_player_has_effect">
 safe_player_has_effect</a>
 </li>
+<li>
+<a href="#hertz:speed_above">
+speed_above</a>
+</li>
+<li>
+<a href="#hertz:speed_below">
+speed_below</a>
+</li>
 </ul>
 <h3>
 alienevo</h3>
@@ -97,6 +105,46 @@ afomni</h3>
 <li>
 <a href="#afomni:is_mainhand">
 is_mainhand</a>
+</li>
+</ul>
+<h3>
+Heroes</h3>
+<ul>
+<li>
+<a href="#heroes:has_powers">
+has_powers</a>
+</li>
+<li>
+<a href="#heroes:holding_cryo_tool">
+holding_cryo_tool</a>
+</li>
+<li>
+<a href="#heroes:in_domain_pocket">
+in_domain_pocket</a>
+</li>
+<li>
+<a href="#heroes:in_pocket">
+in_pocket</a>
+</li>
+<li>
+<a href="#heroes:is_mainhand">
+is_mainhand</a>
+</li>
+<li>
+<a href="#heroes:on_roof">
+on_roof</a>
+</li>
+<li>
+<a href="#heroes:on_wall">
+on_wall</a>
+</li>
+<li>
+<a href="#heroes:on_wall_move">
+on_wall_move</a>
+</li>
+<li>
+<a href="#heroes:overload">
+overload</a>
 </li>
 </ul>
 <h3>
@@ -686,6 +734,118 @@ Example:</h3>
 </div>
 <hr>
 
+<div id="hertz:speed_above">
+<h2>
+speed_above</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+speedforce_id</td>
+<td>
+String</td>
+<td>
+ID used for speed control</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+speedLevel</td>
+</tr>
+<tr>
+<td>
+amount</td>
+<td>
+Integer</td>
+<td>
+Amount control needs to be over or meet</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+1</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"hertz:speed_above","speedforce_id":"speedLevel","amount":1}</pre>
+</div>
+<hr>
+
+<div id="hertz:speed_below">
+<h2>
+speed_below</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+speedforce_id</td>
+<td>
+String</td>
+<td>
+ID used for speed control</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+speedLevel</td>
+</tr>
+<tr>
+<td>
+amount</td>
+<td>
+Integer</td>
+<td>
+Amount control needs to be under</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+1</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"hertz:speed_below","speedforce_id":"speedLevel","amount":1}</pre>
+</div>
+<hr>
+
 <div id="alienevo:color">
 <h2>
 color</h2>
@@ -1015,6 +1175,418 @@ right</td>
 Example:</h3>
 <pre class="json-snippet">
 {"type":"afomni:is_mainhand","hand_type":"right"}</pre>
+</div>
+<hr>
+
+<div id="heroes:has_powers">
+<h2>
+has_powers</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"heroes:has_powers"}</pre>
+</div>
+<hr>
+
+<div id="heroes:holding_cryo_tool">
+<h2>
+holding_cryo_tool</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+mainhand</td>
+<td>
+Boolean</td>
+<td>
+ </td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+true</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"heroes:holding_cryo_tool","mainhand":true}</pre>
+</div>
+<hr>
+
+<div id="heroes:in_domain_pocket">
+<h2>
+in_domain_pocket</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+id_scoreboard</td>
+<td>
+String</td>
+<td>
+Scoreboard used to identify storage id</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+Score.Board</td>
+</tr>
+<tr>
+<td>
+dimension_id</td>
+<td>
+String</td>
+<td>
+Scoreboard used for timer</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+minecraft:the_overworld</td>
+</tr>
+<tr>
+<td>
+dimension_size</td>
+<td>
+String</td>
+<td>
+Scoreboard used for dimension size</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+Heroes.Pocket.Id</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"heroes:in_domain_pocket","id_scoreboard":"Score.Board","dimension_id":"minecraft:the_overworld","dimension_size":"Heroes.Pocket.Id"}</pre>
+</div>
+<hr>
+
+<div id="heroes:in_pocket">
+<h2>
+in_pocket</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+id_scoreboard</td>
+<td>
+String</td>
+<td>
+Scoreboard used to identify storage id</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+Score.Board</td>
+</tr>
+<tr>
+<td>
+dimension_id</td>
+<td>
+String</td>
+<td>
+Scoreboard used for timer</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+minecraft:the_overworld</td>
+</tr>
+<tr>
+<td>
+dimension_size</td>
+<td>
+String</td>
+<td>
+Scoreboard used for dimension size</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+Heroes.Pocket.Id</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"heroes:in_pocket","id_scoreboard":"Score.Board","dimension_id":"minecraft:the_overworld","dimension_size":"Heroes.Pocket.Id"}</pre>
+</div>
+<hr>
+
+<div id="heroes:is_mainhand">
+<h2>
+is_mainhand</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+hand_type</td>
+<td>
+String</td>
+<td>
+Is the main hand the right or left hand? Valid values are "left" or "right"</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+right</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"heroes:is_mainhand","hand_type":"right"}</pre>
+</div>
+<hr>
+
+<div id="heroes:on_roof">
+<h2>
+on_roof</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+data_name</td>
+<td>
+String</td>
+<td>
+Persistent data used</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+heroes_climb</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"heroes:on_roof","data_name":"heroes_climb"}</pre>
+</div>
+<hr>
+
+<div id="heroes:on_wall">
+<h2>
+on_wall</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+data_name</td>
+<td>
+String</td>
+<td>
+Persistent data used</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+heroes_climb</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"heroes:on_wall","data_name":"heroes_climb"}</pre>
+</div>
+<hr>
+
+<div id="heroes:on_wall_move">
+<h2>
+on_wall_move</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+data_name</td>
+<td>
+String</td>
+<td>
+Persistent data used</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+heroes_climb</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"heroes:on_wall_move","data_name":"heroes_climb"}</pre>
+</div>
+<hr>
+
+<div id="heroes:overload">
+<h2>
+overload</h2>
+<p>
+Applicable for: all</p>
+<h3>
+Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Description</th>
+<th>
+Required</th>
+<th>
+Fallback Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+overload_amount</td>
+<td>
+Integer</td>
+<td>
+Amount needed to be overloaded</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+1</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-snippet">
+{"type":"heroes:overload","overload_amount":1}</pre>
 </div>
 <hr>
 

@@ -1,0 +1,22 @@
+{
+  "render": {
+    "desaturate": false,
+    "overlay_tooltip": true,
+    "overlay_background": false,
+    "timebox_face": true,
+    "timebox_line": true,
+    "overlay_tooltip_offsetX": 0,
+    "overlay_tooltip_offsetY": 0,
+    "overlay_tooltip_color": 16777215,
+    "overlay_background_color": -1873784752,
+    "glowing_color": 16777045,
+    "tooltip_position": "BOTTOM_RIGHT"
+  },
+  "arrow": {
+    "dynamic_name": true
+  },
+  "timeclock": {
+    "dynamic_name_color": true,
+    "dynamic_name": true
+  }
+}

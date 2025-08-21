@@ -16,5 +16,5 @@
 	thread_name_blacklist = ["Thread-3"]
 
 [Debug]
-	debug = true
+	debug = false
 

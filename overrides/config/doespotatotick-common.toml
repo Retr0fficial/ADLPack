@@ -36,7 +36,7 @@
 	IgnoreItemEntities = true
 	#Slow down item entities' ticking speed
 	#Note this does impact rendering continuity, so this optimization is disabled by default
-	OptimizeItemMovement = false
+	OptimizeItemMovement = true
 	#If you don't want to let a specific item entity in the world to be effected by the optimization, you can write its registry name down here.
 	#Require 'OptimizeItemMovement' to be true
 	ItemWhiteList = ["minecraft:cobblestone"]
