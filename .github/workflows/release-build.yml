@@ -51,7 +51,7 @@ jobs:
         file_path: ADLPack-${{ steps.release_info.outputs.tag_name }}.zip
         changelog: ${{ github.event.release.body }}
         display_name: "Alien Departure Lounge ${{ steps.release_info.outputs.version }}"
-        game_versions: "1.20.1,Forge"
+        game_versions: "Minecraft 1.20:1.20.1,Java 17,Forge"
         release_type: release
 
     - name: Upload to Modrinth
