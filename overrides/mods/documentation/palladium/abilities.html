@@ -83,10 +83,6 @@ entity_damage</a>
 increase_scoreboard</a>
 </li>
 <li>
-<a href="#satsu_iron_man_addon:projectile_script">
-projectile_script</a>
-</li>
-<li>
 <a href="#satsu_iron_man_addon:remove_power">
 remove_power</a>
 </li>
@@ -2571,12 +2567,36 @@ false</td>
 <td>
 minecraft:air</td>
 </tr>
+<tr>
+<td>
+blockset</td>
+<td>
+String</td>
+<td>
+name of the block to set</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+minecraft:air</td>
+</tr>
+<tr>
+<td>
+destroy</td>
+<td>
+String</td>
+<td>
+keep, destroy or replace</td>
+<td style="background-color: lightcoral">
+false</td>
+<td>
+destroy</td>
+</tr>
 </tbody>
 </table>
 <h3>
 Example:</h3>
 <pre class="json-snippet">
-{"type":"satsu_iron_man_addon:destroy_block","icon":"minecraft:stone","title":"null","bar_color":"light_gray","hidden":false,"hidden_in_bar":false,"list_index":-1,"gui_position":"null","description":"null","range":2.0,"excluded_tag":"minecraft:air"}</pre>
+{"type":"satsu_iron_man_addon:destroy_block","icon":"minecraft:stone","title":"null","bar_color":"light_gray","hidden":false,"hidden_in_bar":false,"list_index":-1,"gui_position":"null","description":"null","range":2.0,"excluded_tag":"minecraft:air","blockset":"minecraft:air","destroy":"destroy"}</pre>
 </div>
 <hr>
 
@@ -3013,216 +3033,6 @@ false</td>
 Example:</h3>
 <pre class="json-snippet">
 {"type":"satsu_iron_man_addon:increase_scoreboard","icon":"minecraft:bread","title":"null","bar_color":"light_gray","hidden":false,"hidden_in_bar":false,"list_index":-1,"gui_position":"null","description":"null","scoreboard_name":"test.score.board","quantity":1}</pre>
-</div>
-<hr>
-
-<div id="satsu_iron_man_addon:projectile_script">
-<h2>
-projectile_script</h2>
-<h3>
-Settings:</h3>
-<table>
-<thead>
-<tr>
-<th>
-Setting</th>
-<th>
-Type</th>
-<th>
-Description</th>
-<th>
-Required</th>
-<th>
-Fallback Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-icon</td>
-<td>
-IIcon</td>
-<td>
-Icon for the ability</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-ItemIcon{stack=0 air}</td>
-</tr>
-<tr>
-<td>
-title</td>
-<td>
-Component</td>
-<td>
-Allows you to set a custom title for this ability</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-/</td>
-</tr>
-<tr>
-<td>
-bar_color</td>
-<td>
-AbilityColor</td>
-<td>
-Changes the color of the ability in the ability bar. Possible values: [white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black]</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-LIGHT_GRAY</td>
-</tr>
-<tr>
-<td>
-hidden</td>
-<td>
-Boolean</td>
-<td>
-Determines if the ability is visible in the powers screen</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-false</td>
-</tr>
-<tr>
-<td>
-hidden_in_bar</td>
-<td>
-Boolean</td>
-<td>
-Determines if the ability is visible in the ability bar on your screen</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-false</td>
-</tr>
-<tr>
-<td>
-list_index</td>
-<td>
-Integer</td>
-<td>
-Determines the list index for custom ability lists. Starts at 0. Going beyond 4 (which is the 5th place in the ability) will start a new list. Keeping it at -1 will automatically arrange the abilities.</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
--1</td>
-</tr>
-<tr>
-<td>
-gui_position</td>
-<td>
-Vec2</td>
-<td>
-Position of the ability in the ability menu. Leave null for automatic positioning. 0/0 is center</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-/</td>
-</tr>
-<tr>
-<td>
-description</td>
-<td>
-AbilityDescription</td>
-<td>
-Description of the ability. Visible in ability menu</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-/</td>
-</tr>
-<tr>
-<td>
-entity_type</td>
-<td>
-String</td>
-<td>
-Entity type ID for the projectile entity</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-minecraft:snowball</td>
-</tr>
-<tr>
-<td>
-entity_data</td>
-<td>
-CompoundTag</td>
-<td>
-Entity NBT data</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-/</td>
-</tr>
-<tr>
-<td>
-inaccuracy</td>
-<td>
-Float</td>
-<td>
-Determines the inaccuracy when shooting the projectile</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-0.0</td>
-</tr>
-<tr>
-<td>
-velocity</td>
-<td>
-Float</td>
-<td>
-Determines the velocity when shooting the projectile</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-1.5</td>
-</tr>
-<tr>
-<td>
-swinging_arm</td>
-<td>
-String</td>
-<td>
-Determines which arm(s) should swing upon shooting. Possible values: [none, main_arm, off_arm, right_arm, left_arm, both]</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-main_arm</td>
-</tr>
-<tr>
-<td>
-x_offset</td>
-<td>
-Float</td>
-<td>
-Offset for the x axis</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-0.0</td>
-</tr>
-<tr>
-<td>
-z_offset</td>
-<td>
-Float</td>
-<td>
-Offset for the z axis</td>
-<td style="background-color: lightcoral">
-false</td>
-<td>
-0.0</td>
-</tr>
-</tbody>
-</table>
-<h3>
-Example:</h3>
-<pre class="json-snippet">
-{"type":"satsu_iron_man_addon:projectile_script","icon":{"type":"palladium:item","item":"minecraft:air","count":0},"title":"null","bar_color":"light_gray","hidden":false,"hidden_in_bar":false,"list_index":-1,"gui_position":"null","description":"null","entity_type":"minecraft:snowball","entity_data":"null","inaccuracy":0.0,"velocity":1.5,"swinging_arm":"main_arm","x_offset":0.0,"z_offset":0.0}</pre>
 </div>
 <hr>
 
