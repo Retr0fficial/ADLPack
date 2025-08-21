@@ -56,7 +56,7 @@ enable_remove_tutorial_if_not_demo: true
 
 # Whether BadOptimizations <version> should be added onto
 # the left text of the F3 menu.
-show_f3_text: true
+show_f3_text: false
 
 # Some config options will be force-disabled if certain mods are present
 # due to incompatibilities (e.g. entity rendering caching
