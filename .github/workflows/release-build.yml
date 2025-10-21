@@ -7,8 +7,6 @@ on:
 jobs:
   build-and-upload:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # Required to upload release assets
     
     steps:
     - name: Checkout repository
@@ -21,6 +19,16 @@ jobs:
         echo "release_name=${{ github.event.release.name }}" >> $GITHUB_OUTPUT
         echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
     
+    - name: Update manifest version
+      run: |
+        version="${{ steps.release_info.outputs.version }}"
+        # Ensure jq is available and update only the top-level "version" field in manifest.json
+        if ! command -v jq >/dev/null 2>&1; then
+          sudo apt-get update
+          sudo apt-get install -y jq
+        fi
+        jq --arg v "$version" '.version = $v' manifest.json > manifest.json.tmp && mv manifest.json.tmp manifest.json
+    
     - name: Create ZIP archive
       run: |
         # Create zip excluding .git directory and other unnecessary files
@@ -28,10 +36,14 @@ jobs:
           -x ".git/*" ".github/*" "*.git*" "STAGING.md" "*.log" "*.tmp"
     
     - name: Upload ZIP to GitHub release
-      uses: softprops/action-gh-release@v1
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        files: ADLPack-${{ steps.release_info.outputs.tag_name }}.zip
-        token: ${{ secrets.GITHUB_TOKEN }}
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ./ADLPack-${{ steps.release_info.outputs.tag_name }}.zip
+        asset_name: ADLPack-${{ steps.release_info.outputs.tag_name }}.zip
+        asset_content_type: application/zip
 
     - name: Upload to CurseForge
       if: ${{ env.CURSEFORGE_TOKEN != '' }}
@@ -46,7 +58,7 @@ jobs:
         file_path: ADLPack-${{ steps.release_info.outputs.tag_name }}.zip
         changelog: ${{ github.event.release.body }}
         display_name: "Alien Departure Lounge ${{ steps.release_info.outputs.version }}"
-        game_versions: "9990"
+        game_versions: "1.20.1,Forge"
         release_type: release
 
     - name: Upload to Modrinth
