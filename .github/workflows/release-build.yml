@@ -21,11 +21,6 @@ jobs:
         echo "release_name=${{ github.event.release.name }}" >> $GITHUB_OUTPUT
         echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
     
-    - name: Update manifest version
-      run: |
-        # Update the version in manifest.json to match the release tag
-        sed -i 's/"version": ".*"/"version": "1.20.1"/' manifest.json
-    
     - name: Create ZIP archive
       run: |
         # Create zip excluding .git directory and other unnecessary files
