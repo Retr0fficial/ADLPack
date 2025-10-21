@@ -1,5 +1,12 @@
 name: Build and Release to All Platforms
 
+# Grant the run explicit write permissions for repository contents so the GITHUB_TOKEN
+# can upload release assets ("resource not accessible by integration" is usually caused
+# by missing contents: write permission).
+permissions:
+  contents: write
+  packages: write
+
 on:
   release:
     types: [published]
